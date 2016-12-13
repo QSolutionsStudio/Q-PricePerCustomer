@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <customer>
+            <children>
+                <price translate="title" module="qsolutions_pricespercustomer">
+                    <title>Price Per Customer</title>
+                    <sort_order>30</sort_order>
+                    <action>adminhtml/pricespercustomer</action>
+                </price>
+            </children>
+        </customer>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <qsolutions_pricespercustomer translate="title" module="qsolutions_pricespercustomer">
+                        <title>Qsolutions</title>
+                        <sort_order>1</sort_order>
+                        <children>
+                            <price_per_customer>
+                                <title>Price Per Customer</title>
+                            </price_per_customer>
+                        </children>
+                    </qsolutions_pricespercustomer>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

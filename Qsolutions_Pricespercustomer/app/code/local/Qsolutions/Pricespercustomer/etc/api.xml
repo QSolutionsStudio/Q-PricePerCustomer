@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <api>
+        <resources>
+            <qsolutions_pricespercustomer translate="title" module="qsolutions_pricespercustomer">
+                <model>qsolutions_pricespercustomer/api_soap</model>
+                <title>Customer Price</title>
+                <acl>qsolutions_pricespercustomer</acl>
+                <methods>
+                    <list translate="title" module="qsolutions_pricespercustomer">
+                        <title>Retrieve collection</title>
+                        <method>items</method>
+                        <acl>pricepercustomer/retrieveCollection</acl>
+                    </list>
+                    <info translate="title" module="qsolutions_pricespercustomer">
+                        <title>Retrieve entity</title>
+                        <acl>pricepercustomer/retrieve</acl>
+                    </info>
+                    <create translate="title" module="qsolutions_pricespercustomer">
+                        <title>Create price per customer</title>
+                        <acl>pricepercustomer/create</acl>
+                    </create>
+                    <update translate="title" module="qsolutions_pricespercustomer">
+                        <title>Update price per customer</title>
+                        <acl>pricepercustomer/update</acl>
+                    </update>
+                    <delete translate="title" module="qsolutions_pricespercustomer">
+                        <title>Delete price per customer</title>
+                        <acl>pricepercustomer/delete</acl>
+                    </delete>
+                </methods>
+                <faults module="qsolutions_pricespercustomer">
+                    <data_invalid>
+                        <code>100</code>
+                        <message>Invalid customer data. Details in error message.</message>
+                    </data_invalid>
+                    <filters_invalid>
+                        <code>101</code>
+                        <message>Invalid filters specified. Details in error message.</message>
+                    </filters_invalid>
+                    <not_exists>
+                        <code>102</code>
+                        <message>Customer not exists.</message>
+                    </not_exists>
+                    <not_deleted>
+                        <code>103</code>
+                        <message>Customer not deleted. Details in error message.</message>
+                    </not_deleted>
+                </faults>
+            </qsolutions_pricespercustomer>
+        </resources>
+        <v2>
+            <resources_function_prefix>
+                <qsolutions_pricespercustomer>pricePerCustomer</qsolutions_pricespercustomer>
+            </resources_function_prefix>
+        </v2>
+        <acl>
+            <resources>
+                <qsolutions_pricespercustomer translate="title" module="qsolutions_pricespercustomer">
+                    <title>Customer Price Per Customer</title>
+                    <sort_order>0</sort_order>
+                    <retrieveCollection translate="title" module="qsolutions_pricespercustomer">
+                        <title>List Price Per Customer API</title>
+                    </retrieveCollection>
+                    <retrieve translate="title" module="qsolutions_pricespercustomer">
+                        <title>Entity Price Per Customer API</title>
+                    </retrieve>
+                    <create translate="title" module="qsolutions_pricespercustomer">
+                        <title>Create Price Per Customer API</title>
+                    </create>
+                    <update translate="title" module="qsolutions_pricespercustomer">
+                        <title>Update Price Per Customer API</title>
+                    </update>
+                    <delete translate="title" module="qsolutions_pricespercustomer">
+                        <title>Delete Price Per Customer API</title>
+                    </delete>
+                </qsolutions_pricespercustomer>
+            </resources>
+        </acl>
+    </api>
+</config>
