@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <adminhtml_customer_edit>
+        <reference name="left">
+            <reference name="customer_edit_tabs">>
+                <action method="addTab">
+                    <name>customer_edit_price</name>
+                    <block>qsolutions_pricespercustomer/adminhtml_customer_edit_tab_pricespercustomer</block>
+                </action>
+            </reference>
+        </reference>
+    </adminhtml_customer_edit>
+
+    <adminhtml_pricespercustomer_index>
+        <reference name="content">
+            <block type="qsolutions_pricespercustomer/adminhtml_pricespercustomer" name="pices_list" />
+        </reference>
+    </adminhtml_pricespercustomer_index>
+
+    <adminhtml_pricespercustomer_edit>
+        <reference name="content">
+            <block type="qsolutions_pricespercustomer/adminhtml_pricespercustomer_edit" name="edit_pricespercustomer_tabs" />
+        </reference>
+    </adminhtml_pricespercustomer_edit>
+
+    <adminhtml_pricespercustomer_new>
+        <reference name="content">
+            <block type="qsolutions_pricespercustomer/adminhtml_pricespercustomer_edit" name="edit_pricespercustomer_tabs" />
+        </reference>
+    </adminhtml_pricespercustomer_new>
+</layout>

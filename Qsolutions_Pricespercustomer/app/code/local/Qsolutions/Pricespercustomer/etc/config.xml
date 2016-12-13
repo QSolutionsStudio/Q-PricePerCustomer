@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Qsolutions_Pricespercustomer>
+            <version>0.1.0</version>
+        </Qsolutions_Pricespercustomer>
+    </modules>
+
+    <global>
+        <blocks>
+            <qsolutions_pricespercustomer>
+                <class>Qsolutions_Pricespercustomer_Block</class>
+            </qsolutions_pricespercustomer>
+        </blocks>
+
+        <helpers>
+            <qsolutions_pricespercustomer>
+                <class>Qsolutions_Pricespercustomer_Helper</class>
+            </qsolutions_pricespercustomer>
+        </helpers>
+
+        <models>
+            <qsolutions_pricespercustomer>
+                <class>Qsolutions_Pricespercustomer_Model</class>
+                <resourceModel>qsolutions_pricespercustomer_resource</resourceModel>
+            </qsolutions_pricespercustomer>
+            <qsolutions_pricespercustomer_resource>
+                <class>Qsolutions_Pricespercustomer_Model_Resource</class>
+                <entities>
+                    <entity>
+                        <table>qsolutions_pricespercustomer_entity</table>
+                    </entity>
+                </entities>
+            </qsolutions_pricespercustomer_resource>
+        </models>
+
+        <resources>
+            <qsolutions_pricespercustomer_setup>
+                <setup>
+                    <module>Qsolutions_Pricespercustomer</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </qsolutions_pricespercustomer_setup>
+        </resources>
+    </global>
+
+    <frontend>
+        <events>
+            <catalog_product_collection_load_after>
+                <observers>
+                    <qsolutions_pricespercustomer>
+                        <type>singleton</type>
+                        <class>qsolutions_pricespercustomer/observer</class>
+                        <method>catalogProductCollectionLoadAfter</method>
+                    </qsolutions_pricespercustomer>
+                </observers>
+            </catalog_product_collection_load_after>
+            <catalog_product_get_final_price>
+                <observers>
+                    <qsolutions_pricespercustomer>
+                        <type>singleton</type>
+                        <class>qsolutions_pricespercustomer/observer</class>
+                        <method>catalogProductGetFinalPrice</method>
+                    </qsolutions_pricespercustomer>
+                </observers>
+            </catalog_product_get_final_price>
+        </events>
+    </frontend>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <qsolutions_pricespercustomer>
+                    <file>qsolutions/pricespercustomer.xml</file>
+                </qsolutions_pricespercustomer>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <translations>
+                    <files>
+                        <default>Qsolutions_Pricespercustomer.csv</default>
+                    </files>
+                </translations>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <qsolutions_pricespercustomer before="Mage_Adminhtml">Qsolutions_Pricespercustomer_Adminhtml</qsolutions_pricespercustomer>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
