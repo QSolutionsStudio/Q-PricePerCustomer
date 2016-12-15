@@ -1,1 +1,12 @@
-.idea
+# PHPStorm
+/.idea/
+
+#NetBaans - if someone likes to use it
+/.nbproject/
+
+#others
+/test.php
+/LICENSE.html
+/LICENSE.txt
+/LICENSE_AFL.txt
+/RELEASE_NOTES.txt
