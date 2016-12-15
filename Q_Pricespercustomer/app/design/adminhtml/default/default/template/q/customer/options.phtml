@@ -1,0 +1,16 @@
+<?php
+/**
+ * @category Qsolutions
+ * @package Q_Pricespercustomer
+ * @author Michał Jóźwiak <jozef@qsolutionsstudio.com>
+ */
+?>
+<div class="entry-edit">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-customer-view"><?php echo $this->__('Special Prises For Clients') ?></h4>
+    </div>
+    <?php echo $this->getLayout()
+        ->createBlock("q_pricespercustomer/adminhtml_customer_edit_tab_pricespercustomer_list")
+        ->toHtml();
+    ?>
+</div>
